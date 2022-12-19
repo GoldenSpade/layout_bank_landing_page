@@ -1,0 +1,67 @@
+.button {
+  padding: 6px 18px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-family: "RubikMedium", sans-serif;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: none;
+  border: 2px solid $c-pink;
+  color: $c-white;
+  background: $c-pink;
+  max-width: max-content;
+  text-transform: uppercase;
+  @include transitionColorBg;
+  cursor: pointer;
+  &:hover {
+    color: $c-pink;
+    background: transparent;
+  }
+
+  &__thin-filled {
+    border-width: 1px;
+    font-family: "MetropolisSemiBold", sans-serif;
+    color: $c-white;
+    background: $c-pink;
+    @include transitionColorBg;
+    &:hover {
+      color: $c-pink;
+      background: transparent;
+    }
+  }
+  &__thin-not-filled {
+    border-width: 1px;
+    font-family: "MetropolisSemiBold", sans-serif;
+    color: $c-pink;
+    background: transparent;
+    @include transitionColorBg;
+    &:hover {
+      color: $c-white;
+      background: $c-pink;
+    }
+  }
+  &__mg-right {
+    margin-right: 20px;
+    @media (max-width: 500px) {
+      margin-right: 10px;
+    }
+    @media (max-width: 400px) {
+      margin-right: 0;
+    }
+  }
+  &__mobile-full-width {
+    @media (max-width: 400px) {
+      min-width: 100%;
+      text-align: center;
+    }
+  }
+  &__no-margins {
+    margin: 0;
+  }
+  &__m-w-80-540 {
+    @media (max-width: 540px) {
+      min-width: 80%;
+    }
+  }
+}

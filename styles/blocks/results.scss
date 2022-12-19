@@ -1,0 +1,44 @@
+.results {
+  &__items {
+    @include flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    &--animation {
+      @include animFadeIn;
+    }
+  }
+
+  &__item {
+    @include flexColumnCenter;
+    flex: 0 1 25%;
+    min-width: 172px;
+    padding-bottom: 50px;
+    @media (max-width: 840px) {
+      flex: 0 1 50%;
+    }
+    @media (max-width: 400px) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__item-title {
+    color: $c-dark-grey;
+    font-family: "MetropolisBold", sans-serif;
+    font-size: 40px;
+    line-height: 43px;
+    transition: color 400ms;
+    &:hover {
+      color: $c-pink;
+    }
+  }
+
+  &__item-caption {
+    color: $c-middle-dark-grey;
+    font-family: "MetropolisMedium", sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    max-width: 172px;
+  }
+}

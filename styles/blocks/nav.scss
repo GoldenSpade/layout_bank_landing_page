@@ -1,0 +1,162 @@
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 27px 0;
+  background: $c-cream;
+  border-bottom: solid 5px $c-pink-tr;
+
+  &__wrap {
+    @include flexBetween;
+    flex-wrap: wrap;
+    @media (max-width: 950px) {
+      justify-content: center;
+    }
+    @media (max-width: 500px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__items {
+    @include flex;
+    position: relative;
+    font-family: "MetropolisSemiBold", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    flex-wrap: wrap;
+    @media (max-width: 950px) {
+      justify-content: center;
+    }
+    @media (max-width: 816px) {
+      padding: 15px 0;
+    }
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    @include flex;
+    margin-right: 42px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (max-width: 985px) {
+      margin-right: 15px;
+    }
+  }
+
+  &__item-link {
+    border-bottom: 2px solid transparent;
+    @include transitionColorBorder;
+    &:hover {
+      color: $c-pink;
+      border-bottom: 2px solid $c-pink;
+    }
+    &:focus {
+      color: $c-pink;
+      border-bottom: 2px solid $c-pink;
+    }
+  }
+
+  &__form {
+    @include flex;
+  }
+
+  &__input-wrap {
+    position: absolute;
+    right: 158px;
+    @media (max-width: 816px) {
+      position: relative;
+      right: initial;
+    }
+  }
+
+  &__input-wrap--hide {
+    display: none;
+  }
+
+  &__input {
+    position: relative;
+    display: inline-block;
+    border: solid 1px $c-pink;
+    border-radius: 3px;
+    padding: 3px 0 2px 5px;
+    margin-right: 8px;
+    font-family: "MetropolisMedium", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    &::placeholder {
+      color: $c-middle-grey;
+    }
+    @media (max-width: 400px) {
+      max-width: 160px;
+    }
+  }
+
+  &__label-del {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 20px;
+    top: 2px;
+  }
+
+  &__label-del-ico {
+    color: $c-middle-grey;
+    width: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__elems {
+    position: relative;
+    padding-left: 10px;
+    @include flexBetween;
+    align-items: center;
+    @media (max-width: 400px) {
+      padding: 0;
+    }
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &__search {
+    fill: $c-pink;
+    margin-right: 24px;
+    cursor: pointer;
+    transition: transform 400ms;
+    &:hover {
+      transform: scale(1.2);
+    }
+    @media (max-width: 400px) {
+      margin-right: 12px;
+    }
+  }
+
+  &__show-mobile-menu {
+    min-width: 18px;
+    min-height: 14px;
+    background: url("../img/nav/menu-icon.svg");
+    @include backgroundSettings;
+    display: none;
+    right: 15px;
+    padding: 5px;
+    transition: background 400ms;
+    @media (max-width: 500px) {
+      display: inline-block;
+    }
+    &:hover {
+      background: url("../img/nav/menu-icon-hover.svg");
+      @include backgroundSettings;
+    }
+    &:focus {
+      background: url("../img/nav/menu-icon-hover.svg");
+      @include backgroundSettings;
+    }
+  }
+}

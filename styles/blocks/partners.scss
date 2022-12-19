@@ -1,0 +1,45 @@
+.partners {
+  padding-top: 70px;
+  @media (max-width: 500px) {
+    padding-top: 50px;
+  }
+
+  &__title {
+    color: $c-dark-grey;
+    font-family: "MetropolisMedium", sans-serif;
+    font-size: 23px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 70px;
+  }
+
+  &__items {
+    @include flexCenter;
+    flex-wrap: wrap;
+    &--animation {
+      @include animFadeInUp;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    min-width: max-content;
+    flex: 0 1 25%;
+    padding-bottom: 50px;
+    min-height: 120px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    @media (max-width: 800px) {
+      flex: 0 1 50%;
+    }
+    @media (max-width: 500px) {
+      flex: 0 1 100%;
+    }
+  }
+  
+  &__item-img {
+    min-width: max-content;
+  }
+}

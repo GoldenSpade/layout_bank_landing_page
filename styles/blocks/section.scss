@@ -1,0 +1,26 @@
+.section {
+  &__wrap {
+    @include flexColumnCenter;
+    padding: 70px 0 40px;
+    @media (max-width: 800px) {
+      padding: 40px 0 40px;
+    }
+    @media (max-width: 500px) {
+      padding: 40px 0;
+    }
+  }
+
+  &__title {
+    color: $c-dark-grey;
+    @include sectionTitle;
+  }
+
+  &__subtitle {
+    @include sectionSubtitle;
+    max-width: 660px;
+  }
+  
+  &__pt-20 {
+    padding-top: 20px;
+  }
+}

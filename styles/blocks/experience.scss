@@ -1,0 +1,48 @@
+.experience {
+  &__items {
+    @include flexBetween;
+    flex-wrap: wrap;
+    &--animation {
+      @include animFadeInUp;
+    }
+  }
+
+  &__item {
+    @include flexColumnCenter;
+    text-align: center;
+    min-width: 180px;
+    min-height: 200px;
+    flex: 0 1 25%;
+    padding: 10px;
+    @media (max-width: 800px) {
+      flex: 0 1 49%;
+    }
+    @media (max-width: 500px) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__item-title {
+    color: $c-dark-grey;
+    font-family: "MetropolisBold", sans-serif;
+    font-size: 22px;
+    line-height: 22px;
+    padding-top: 18px;
+    padding-bottom: 10px;
+  }
+
+  &__item-subtitle {
+    color: $c-middle-grey;
+    font-family: "MetropolisMedium", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    max-width: 200px;
+    text-align: justify;
+    flex-grow: 1;
+    @media (max-width: 800px) {
+      max-width: 250px;
+    }
+  }
+}

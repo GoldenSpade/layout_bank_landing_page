@@ -1,0 +1,12 @@
+.social {
+  @include flexCenter;
+  &__link {
+    margin-right: 15px;
+  }
+  &__ico {
+    max-width: 32px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

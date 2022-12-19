@@ -1,0 +1,54 @@
+@import "./utils/resets.scss";
+@import "./utils/fonts.scss";
+@import "./utils/vars.scss";
+@import "./utils/mixins.scss";
+
+@import "./blocks/container.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/button.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/header.scss";
+@import "./blocks/social.scss";
+@import "./blocks/section.scss";
+@import "./blocks/menu-mobile.scss";
+@import "./blocks/experience.scss";
+@import "./blocks/partners.scss";
+@import "./blocks/glance.scss";
+@import "./blocks/services.scss";
+@import "./blocks/results.scss";
+@import "./blocks/subscribe.scss";
+@import "./blocks/footer.scss";
+
+@import "./animate-css/animate.min.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Metropolis", sans-serif;
+  color: $c-black;
+  font-size: 16px;
+
+  &::-webkit-scrollbar {
+    max-width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $c-light-grey;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $c-pink-tr;
+    border-radius: 10px;
+  }
+}
+
+.block-scroll {
+  overflow-y: hidden;
+}

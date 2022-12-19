@@ -1,0 +1,23 @@
+.logo {
+  padding-right: 30px;
+  padding-left: 30px;
+  @media(max-width: 985px) {
+    padding-left: 0;
+  }
+  @media(max-width: 660px) {
+    margin-left: 25px;
+    padding: 0;
+  }
+  @media(max-width: 500px) {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+  }
+  &__wrap {
+    min-width: 100%;
+    @include flexBetween;
+    align-items: center;
+  }
+}

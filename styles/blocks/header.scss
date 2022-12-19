@@ -1,0 +1,157 @@
+.header {
+  background: $c-cream;
+  padding: 30px 0;
+  @media (max-width: 935px) {
+    flex-direction: column;
+  }
+
+  &__wrap {
+    @include flexBetween;
+    @media (max-width: 935px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__col-left {
+    @include flexCenter;
+    flex: 0 1 50%;
+    min-width: 450px;
+    @media (max-width: 935px) {
+      flex: 0 1 100%;
+      min-width: 0;
+    }
+  }
+
+  &__col-right {
+    @include flexCenter;
+    min-height: 500px;
+    flex: 0 1 50%;
+    background: $c-cream;
+    min-width: 450px;
+    min-height: max-content;
+    @media (max-width: 935px) {
+      flex: 0 1 100%;
+      min-width: 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__content-title {
+    color: $c-black;
+    font-family: "MetropolisBlack", sans-serif;
+    max-width: 453px;
+    font-size: 63px;
+    line-height: 68px;
+    padding-bottom: 23px;
+    @media (max-width: 935px) {
+      min-width: 100%;
+      text-align: center;
+    }
+    @media (max-width: 500px) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    @media (max-width: 400px) {
+      font-size: 44px;
+      line-height: 46px;
+    }
+    &--animation {
+      @include animFadeInLeft;
+    }
+  }
+
+  &__content-text {
+    color: $c-middle-dark-grey;
+    font-family: "MetropolisMedium", sans-serif;
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 30px;
+    @media (max-width: 935px) {
+      text-align: center;
+      min-width: 100%;
+    }
+    &--animation {
+      @include animFadeInLeft;
+    }
+  }
+
+  &__content-buttons {
+    @include flex;
+    padding-bottom: 50px;
+    @media (max-width: 935px) {
+      flex-wrap: wrap;
+      min-width: 100%;
+      justify-content: center;
+    }
+    @media (max-width: 660px) {
+      padding-bottom: 30px;
+    }
+    &--animation {
+      @include animPulse;
+    }
+  }
+
+  &__contacts {
+    @include flex;
+    @media (max-width: 935px) {
+      justify-content: center;
+      display: none;
+    }
+    &--animation {
+      @include animPulse;
+    }
+  }
+
+  &__contacts--hide {
+    display: none;
+  }
+
+  &__contacts-mobile--hide {
+    display: none;
+    @media (max-width: 935px) {
+      @include flexCenter;
+      min-width: 100%;
+      padding-top: 20px;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    max-width: max-content;
+    color: $c-black;
+    font-family: "MetropolisSemiBold", sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url("../img/header/social/social-phone.svg");
+      @include backgroundSettings;
+      margin-right: 11px;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 24px;
+      background: $c-light-grey;
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+  }
+}
