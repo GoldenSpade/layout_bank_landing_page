@@ -23,7 +23,7 @@
       padding-bottom: 40px;
     }
     &--animation {
-      @include animFadeInLeft;
+      @include animFadeIn;
     }
   }
 
@@ -43,7 +43,7 @@
       flex: 0 1 100%;
     }
     &--animation {
-      @include animFadeIRight;
+      @include animFadeIn;
     }
   }
 

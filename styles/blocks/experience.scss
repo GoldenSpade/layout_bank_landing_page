@@ -3,7 +3,7 @@
     @include flexBetween;
     flex-wrap: wrap;
     &--animation {
-      @include animFadeInUp;
+      @include animFadeIn;
     }
   }
 

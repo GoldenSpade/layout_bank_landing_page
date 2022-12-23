@@ -76,22 +76,8 @@
   animation-duration: 1.5s;
 }
 
-@mixin animFadeIRight {
-  animation: fadeInRight;
-  animation-duration: 1.5s;
-}
-@mixin animFadeInUp {
-  animation: fadeInUp;
-  animation-duration: 1.5s;
-}
-
 @mixin animPulse {
   animation: pulse;
   animation-duration: 1.5s;
   animation-delay: 0.8s;
-}
-
-@mixin animSlideInUp {
-  animation: slideInUp;
-  animation-duration: 1.5s;
 }
