@@ -1,4 +1,4 @@
-# [Bank's landing page.](https://BilliZane.github.io/layout_bank_landing_page) #
+# [Bank's landing page.](https://goldenspade.github.io/layout_bank_landing_page) #
 
 The page is fully responsive for screens with a width of 350px and more.
 
@@ -21,4 +21,4 @@ Fonts are placed in a separate file "_fonts".
 * JavaScript;
 * Visual Studio Code.
 
-### [DEMO LINK](https://BilliZane.github.io/layout_bank_landing_page) ###
+### [DEMO LINK](https://goldenspade.github.io/layout_bank_landing_page) ###
